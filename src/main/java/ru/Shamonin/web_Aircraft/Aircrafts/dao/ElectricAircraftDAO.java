@@ -16,6 +16,7 @@ import ru.Shamonin.web_Aircraft.Aircrafts.models.Engines.ElectricEngine;
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class ElectricAircraftDAO {
     private List<ElectricAircraft> electricAircrafts = new ArrayList<>();
     private int id = 0;
