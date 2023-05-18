@@ -1,5 +1,6 @@
 package ru.Shamonin.web_Aircraft.Aircrafts.controllers;
 
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.util.MultiValueMap;
@@ -42,7 +43,7 @@ public class AircraftController {
     }
 
     @PostMapping("/add")
-    public ElectricAircraft addAircraftAndReturn(@RequestBody ElectricAircraft electricAircraft) {
+    public ElectricAircraft addAircraftAndReturn(@RequestBody @Valid ElectricAircraft electricAircraft) {
         return electricAircrafts.addAircraft(electricAircraft);
     }
 }
