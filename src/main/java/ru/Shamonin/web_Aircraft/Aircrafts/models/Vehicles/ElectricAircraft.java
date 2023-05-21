@@ -19,7 +19,7 @@ import ru.Shamonin.web_Aircraft.Aircrafts.validation.ValidateAircraftPrice;
 public class ElectricAircraft {
     private ElectricEngine engine;
     @ValidateAircraftPrice
-    private String price;
+    private int price;
     @ValidateAircraftNumber
     private String number;
 }
