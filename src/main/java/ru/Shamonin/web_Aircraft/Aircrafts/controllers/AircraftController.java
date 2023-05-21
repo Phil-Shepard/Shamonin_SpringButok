@@ -53,10 +53,4 @@ public class AircraftController {
     public ElectricAircraft addAircraftAndReturn(@RequestBody @Valid ElectricAircraft electricAircraft) {
         return electricAircrafts.addAircraft(electricAircraft);
     }
-
-    @ExceptionHandler(DaoException.class)
-    public ResponseEntity<ResponseError> badGateWayException(DaoException exception) {
-        log.error(exception.getMessage(), exception);
-        return new ResponseEntity<>(new ResponseError(exception.getMessage()), HttpStatus.BAD_GATEWAY);
-    }
 }
