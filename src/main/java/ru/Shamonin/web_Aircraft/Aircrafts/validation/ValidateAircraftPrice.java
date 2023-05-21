@@ -16,5 +16,5 @@ import java.lang.annotation.*;
 public @interface ValidateAircraftPrice  {
     public String message() default "Invalid aircraft name: name must be at least 4 and no more than 25 characters";
     Class<?>[] groups() default{};
-    Class<? extends Payload>[] paylod() default {};
+    Class<? extends Payload>[] payload() default {};
 }
